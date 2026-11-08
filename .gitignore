@@ -2,3 +2,5 @@ preview/
 .DS_Store
 __pycache__/
 .image-candidates/
+pexels_key.txt
+*.key
