@@ -1,4 +1,5 @@
 ---
+date: 2026-11-08
 title: Easy Overnight Oats: A 5-Minute High-Fibre Breakfast
 description: A no-cook breakfast you prepare the night before — plus four flavour ideas and why fibre matters.
 category: recipes

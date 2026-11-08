@@ -218,6 +218,8 @@ def write(out, rel, text):
 
 
 def load_posts(include_drafts):
+    (CONTENT / "posts").mkdir(parents=True, exist_ok=True)
+    (CONTENT / "drafts").mkdir(parents=True, exist_ok=True)
     posts = [read_doc(p) for p in sorted((CONTENT / "posts").glob("*.md"))]
     if include_drafts:
         for p in sorted((CONTENT / "drafts").glob("*.md")):
@@ -346,6 +348,7 @@ def main():
         text = src.read_text(encoding="utf-8")
         text = re.sub(r"^date:.*$", f"date: {today}", text, count=1, flags=re.M) if re.search(r"^date:", text, re.M) \
             else text.replace("---\n", f"---\ndate: {today}\n", 1)
+        (CONTENT / "posts").mkdir(parents=True, exist_ok=True)
         (CONTENT / "posts" / f"{today}-{args[1]}.md").write_text(text, encoding="utf-8")
         src.unlink()
         build("public")

@@ -1,4 +1,5 @@
 ---
+date: 2026-11-08
 title: How Much Exercise Do You Really Need? The 150-Minute Rule Explained
 description: The World Health Organization's activity guidelines in plain English — and simple ways to hit them without a gym.
 category: fitness

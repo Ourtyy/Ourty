@@ -1,4 +1,5 @@
 ---
+date: 2026-11-08
 title: How Much Sleep Do Adults Really Need?
 description: What the experts recommend, why it matters, and seven small habits that make a good night's sleep more likely.
 category: sleep

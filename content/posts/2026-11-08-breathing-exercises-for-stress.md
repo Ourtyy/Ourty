@@ -1,4 +1,5 @@
 ---
+date: 2026-11-08
 title: A 5-Minute Breathing Exercise for Stressful Days
 description: A simple, free technique you can use anywhere to feel calmer — step by step.
 category: mind
