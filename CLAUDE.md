@@ -6,7 +6,7 @@ The owner speaks Spanish: always reply in Spanish. Articles are written in Engli
 
 ## Workflow
 - New articles go to `content/drafts/<slug>.md`. The owner reviews every article before it goes live.
-- Preview: `python3 build.py preview` (output in `preview/`, served by the `ourty-preview` launch config on port 8765).
+- Preview: `python3 build.py preview` (output in `preview/`, served by the `ourty-site` launch config on port 8766).
 - Publish only when the owner says so: `python3 build.py publish <slug>`, then `git add -A && git commit -m "Publish <slug>" && git push`.
 - Never put AdSense IDs or other config in unless the owner gives them.
 

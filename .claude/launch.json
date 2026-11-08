@@ -2,10 +2,16 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "ourty-preview",
+      "name": "ourty-site",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8765", "--directory", "preview"],
-      "port": 8765
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8766",
+        "--directory",
+        "/Users/khaoulaatiaibnousaih/Documents/Ourty/preview"
+      ],
+      "port": 8766
     }
   ]
 }

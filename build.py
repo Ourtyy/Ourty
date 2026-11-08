@@ -43,7 +43,7 @@ def inline(text):
     return re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", link, text)
 
 
-def markdown(src):
+def markdown(src, root=""):
     out, para, items, list_tag, quote = [], [], [], None, []
 
     def flush():
@@ -62,8 +62,15 @@ def markdown(src):
         h = re.match(r"^(#{2,4})\s+(.*)", s)
         ul = re.match(r"^[-*]\s+(.*)", s)
         ol = re.match(r"^\d+[.)]\s+(.*)", s)
+        img = re.match(r"^!\[([^\]]*)\]\(([^)\s]+)\)\s*(.*)$", s)
         if not s:
             flush()
+        elif img:
+            flush()
+            alt, url, cap = img.groups()
+            url = url if url.startswith("http") else root + url
+            caption = f"<figcaption>{inline(cap)}</figcaption>" if cap else ""
+            out.append(f'<figure><img src="{url}" alt="{html.escape(alt)}" loading="lazy">{caption}</figure>')
         elif h:
             flush()
             level = len(h.group(1))
@@ -122,7 +129,7 @@ LANGS = [("es", "Español"), ("fr", "Français"), ("de", "Deutsch"), ("it", "Ita
          ("pt", "Português"), ("ar", "العربية"), ("zh-CN", "中文"), ("hi", "हिन्दी")]
 
 
-def page(title, body, root, mode, description="", canonical="", extra_head=""):
+def page(title, body, root, mode, description="", canonical="", extra_head="", image=""):
     cats = SITE["categories"]
     nav = "".join(f'<a href="{root}category/{k}/">{c["label"]}</a>' for k, c in cats.items())
     client = SITE.get("adsense_client")
@@ -145,6 +152,7 @@ def page(title, body, root, mode, description="", canonical="", extra_head=""):
 <meta property="og:title" content="{html.escape(title)}">
 <meta property="og:description" content="{html.escape(description or SITE['tagline'])}">
 <meta property="og:site_name" content="{SITE['name']}">
+{f'<meta property="og:image" content="{image}">' if image else ''}
 {canon}
 <link rel="icon" href="{root}favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="{SITE['name']}" href="{root}feed.xml">
@@ -198,8 +206,12 @@ def reading_time(body):
 def card(p, root):
     c = SITE["categories"].get(p["category"], {"label": p["category"], "emoji": "✨", "color": "#eee"})
     draft = '<span class="badge-draft">Draft</span>' if p.get("draft") else ""
+    if p.get("image"):
+        art = f'<img src="{root}{p["image"]}" alt="{html.escape(p.get("image_alt", ""))}" loading="lazy">'
+    else:
+        art = f'<span>{p.get("emoji") or c["emoji"]}</span>'
     return f"""<article class="card">
-  <a href="{root}posts/{p['slug']}/" class="card-art" style="background:{c['color']}"><span>{p.get('emoji') or c['emoji']}</span></a>
+  <a href="{root}posts/{p['slug']}/" class="card-art" style="background:{c['color']}">{art}</a>
   <div class="card-body">
     <p class="meta"><a href="{root}category/{p['category']}/">{c['label']}</a> · {reading_time(p['body'])} min read {draft}</p>
     <h2><a href="{root}posts/{p['slug']}/">{html.escape(p['title'])}</a></h2>
@@ -237,6 +249,8 @@ def build(mode="public"):
     out.mkdir()
     for f in STATIC.iterdir():
         shutil.copy(f, out / f.name)
+    if (CONTENT / "images").exists():
+        shutil.copytree(CONTENT / "images", out / "images")
 
     base = SITE["base_url"].rstrip("/")
     posts = load_posts(include_drafts=(mode == "preview"))
@@ -261,7 +275,18 @@ def build(mode="public"):
     for p in posts:
         r = "../../"
         c = cats.get(p["category"], {"label": p["category"], "emoji": "✨", "color": "#eee"})
-        body_html = markdown(p["body"])
+        body_html = markdown(p["body"], r)
+        hero_img = ""
+        if p.get("image"):
+            credit = p.get("image_credit", "")
+            if p.get("image_source"):
+                credit = f'<a href="{p["image_source"]}" target="_blank" rel="noopener">{html.escape(credit)}</a>'
+            lic = p.get("image_license", "")
+            if lic and p.get("image_license_url"):
+                lic = f'<a href="{p["image_license_url"]}" target="_blank" rel="noopener">{lic}</a>'
+            cap = f"Photo: {credit}" + (f" · {lic}" if lic else "") if credit else ""
+            hero_img = (f'<figure class="hero-img"><img src="{r}{p["image"]}" alt="{html.escape(p.get("image_alt", ""))}">'
+                        + (f"<figcaption>{cap}</figcaption>" if cap else "") + "</figure>")
         # put an ad after the 3rd paragraph
         parts = body_html.split("</p>", 3)
         if len(parts) == 4:
@@ -284,6 +309,7 @@ def build(mode="public"):
     <p class="lede">{html.escape(p.get('description', ''))}</p>
     <p class="byline">By {SITE['author']} · {fmt_date(p.get('date'))} · {reading_time(p['body'])} min read</p>
   </header>
+  {hero_img}
   <div class="prose">{body_html}</div>
   <aside class="disclaimer"><strong>Health note:</strong> this article is general information, not medical advice. Talk to a doctor or qualified professional before making changes to your diet, exercise or medication — especially if you are pregnant or have a health condition.</aside>
   {ad('after-article', mode)}
@@ -291,7 +317,8 @@ def build(mode="public"):
 <section class="related"><h2>Keep reading</h2><div class="grid">{''.join(card(q, r) for q in related)}</div></section>"""
         write(out, f"posts/{p['slug']}/index.html",
               page(p["title"], body, r, mode, p.get("description", ""), f"{base}/posts/{p['slug']}/",
-                   f'<script type="application/ld+json">{schema}</script>'))
+                   f'<script type="application/ld+json">{schema}</script>',
+                   f"{base}/{p['image']}" if p.get("image") else ""))
 
     # categories
     for k, c in cats.items():
@@ -304,7 +331,7 @@ def build(mode="public"):
     # static pages
     for f in sorted((CONTENT / "pages").glob("*.md")):
         d = read_doc(f)
-        body = f'<article class="post"><header class="post-head"><h1>{html.escape(d["title"])}</h1></header><div class="prose">{markdown(d["body"])}</div></article>'
+        body = f'<article class="post"><header class="post-head"><h1>{html.escape(d["title"])}</h1></header><div class="prose">{markdown(d["body"], "../")}</div></article>'
         write(out, f"{d['slug']}/index.html", page(d["title"], body, "../", mode, d.get("description", ""), f"{base}/{d['slug']}/"))
 
     # feeds & SEO files (public only)
