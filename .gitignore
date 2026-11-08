@@ -4,3 +4,4 @@ __pycache__/
 .image-candidates/
 pexels_key.txt
 *.key
+unsplash_key.txt

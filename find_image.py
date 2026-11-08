@@ -5,7 +5,7 @@
   python3 find_image.py pick <N> <name>               -> downloads candidate N in high quality as
                                                          content/images/<name>.jpg and prints the front matter lines
 
-Source: Pexels (needs a free API key in pexels_key.txt, never committed) — free for commercial use.
+Sources, in order: Unsplash (free key in unsplash_key.txt) or Pexels (pexels_key.txt). Key files are never committed.
 Fallback without a key: Openverse (Flickr/Wikimedia, CC0 / CC BY / CC BY-SA).
 Always LOOK at the candidates before picking one: the photo must match the article and look beautiful.
 """
@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parent
 CAND = ROOT / ".image-candidates"
 IMAGES = ROOT / "content" / "images"
 KEY_FILE = ROOT / "pexels_key.txt"
+UNSPLASH_KEY = ROOT / "unsplash_key.txt"
 UA = "OurtyBlogBuilder/1.0 (+https://ourtyy.github.io/Ourty/)"
 
 
@@ -48,6 +49,25 @@ def pexels(query):
     } for p in data.get("photos", [])]
 
 
+def unsplash(query):
+    key = UNSPLASH_KEY.read_text().strip()
+    q = urllib.parse.urlencode({"query": query, "orientation": "landscape", "per_page": 12, "content_filter": "high"})
+    data = json.loads(get(f"https://api.unsplash.com/search/photos?{q}", {"Authorization": f"Client-ID {key}"}))
+    ref = "?utm_source=ourty&utm_medium=referral"
+    return [{
+        "title": p.get("alt_description") or p.get("description") or query,
+        "creator": p["user"]["name"],
+        "source_url": p["links"]["html"] + ref,
+        "credit_url": p["user"]["links"]["html"] + ref,
+        "license": "Unsplash",
+        "license_url": "https://unsplash.com/" + ref,
+        "preview": p["urls"]["small"],
+        "full": p["urls"]["raw"] + "&w=1600&q=80&fm=jpg&fit=crop",
+        "hotlink": True,
+        "download_location": p["links"]["download_location"],
+    } for p in data.get("results", []) if not p.get("premium") and not p.get("plus")]
+
+
 def openverse(query):
     rank = {"cc0": 0, "pdm": 0, "by": 1, "by-sa": 2}
     q = urllib.parse.urlencode({"q": query, "license": "cc0,pdm,by,by-sa", "page_size": 20})
@@ -70,7 +90,12 @@ def openverse(query):
 
 
 def search(query):
-    results = pexels(query) if KEY_FILE.exists() else openverse(query)
+    if UNSPLASH_KEY.exists():
+        results, src = unsplash(query), "Unsplash"
+    elif KEY_FILE.exists():
+        results, src = pexels(query), "Pexels"
+    else:
+        results, src = openverse(query), "Openverse (no API key file found)"
     if CAND.exists():
         shutil.rmtree(CAND)
     CAND.mkdir()
@@ -87,12 +112,25 @@ def search(query):
         picked.append(r)
         print(f"{n}. {r['title'][:70]} | {r['creator']} | {r['license']}")
     (CAND / "meta.json").write_text(json.dumps(picked, indent=1))
-    src = "Pexels" if KEY_FILE.exists() else "Openverse (no pexels_key.txt found)"
     print(f"\nSource: {src}. Candidates in {CAND}/ — look at them, then: python3 find_image.py pick <N> <name>")
 
 
 def pick(n, name):
     meta = json.loads((CAND / "meta.json").read_text())[int(n) - 1]
+    if meta.get("hotlink"):
+        # Unsplash API rules: hotlink the image, register the download, credit photographer + Unsplash
+        key = UNSPLASH_KEY.read_text().strip()
+        get(meta["download_location"], {"Authorization": f"Client-ID {key}"})
+        print("Add these lines to the article front matter:\n")
+        print(f"image: {meta['full']}")
+        print("image_alt: <describe the photo in a few words>")
+        print(f"image_credit: {meta['creator'].replace(':', ' -')}")
+        print(f"image_source: {meta['credit_url']}")
+        print("image_license: Unsplash")
+        print(f"image_license_url: {meta['license_url']}")
+        print("\nFor an extra photo inside the article body use:")
+        print(f"![<alt text>]({meta['full']}) Photo by [{meta['creator']}]({meta['credit_url']}) on [Unsplash]({meta['license_url']})")
+        return
     IMAGES.mkdir(parents=True, exist_ok=True)
     tmp = CAND / "full.jpg"
     tmp.write_bytes(get(meta["full"]))

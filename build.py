@@ -203,11 +203,15 @@ def reading_time(body):
     return max(1, round(len(body.split()) / 220))
 
 
+def img_url(src, root):
+    return src if src.startswith("http") else root + src
+
+
 def card(p, root):
     c = SITE["categories"].get(p["category"], {"label": p["category"], "emoji": "✨", "color": "#eee"})
     draft = '<span class="badge-draft">Draft</span>' if p.get("draft") else ""
     if p.get("image"):
-        art = f'<img src="{root}{p["image"]}" alt="{html.escape(p.get("image_alt", ""))}" loading="lazy">'
+        art = f'<img src="{img_url(p["image"], root)}" alt="{html.escape(p.get("image_alt", ""))}" loading="lazy">'
     else:
         art = f'<span>{p.get("emoji") or c["emoji"]}</span>'
     return f"""<article class="card">
@@ -285,7 +289,7 @@ def build(mode="public"):
             if lic and p.get("image_license_url"):
                 lic = f'<a href="{p["image_license_url"]}" target="_blank" rel="noopener">{lic}</a>'
             cap = f"Photo: {credit}" + (f" · {lic}" if lic else "") if credit else ""
-            hero_img = (f'<figure class="hero-img"><img src="{r}{p["image"]}" alt="{html.escape(p.get("image_alt", ""))}">'
+            hero_img = (f'<figure class="hero-img"><img src="{img_url(p["image"], r)}" alt="{html.escape(p.get("image_alt", ""))}">'
                         + (f"<figcaption>{cap}</figcaption>" if cap else "") + "</figure>")
         # put an ad after the 3rd paragraph
         parts = body_html.split("</p>", 3)
@@ -318,7 +322,7 @@ def build(mode="public"):
         write(out, f"posts/{p['slug']}/index.html",
               page(p["title"], body, r, mode, p.get("description", ""), f"{base}/posts/{p['slug']}/",
                    f'<script type="application/ld+json">{schema}</script>',
-                   f"{base}/{p['image']}" if p.get("image") else ""))
+                   img_url(p["image"], base + "/") if p.get("image") else ""))
 
     # categories
     for k, c in cats.items():
