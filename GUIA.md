@@ -25,14 +25,40 @@ Léelos y dime "publica el 1 y el 3" o "cambia esto en el 2".
 3. Confirma el email.
 4. Dime tu nombre de usuario. **Nunca me des la contraseña.**
 
-## Paso 3 — Compra un dominio (~10–15 €/año)
-`ourty.com` ya está registrado por otra persona. Estos estaban libres el 8/11/2026:
-- **ourty.co**
-- **getourty.com**
-- **ourtyhealth.com**
+## Paso 3 — Comprar el dominio (cuando tengas ~11 €)
 
-Recomendado: comprarlo en **Cloudflare Registrar** (precio de coste) o **Porkbun**. Lo pagas tú; yo te digo después qué configurar.
-> AdSense no acepta subdominios gratuitos tipo `usuario.github.io`, así que el dominio propio es necesario para ganar dinero.
+### 3.1 Elegir el nombre
+- `ourty.com` está cogido. Libres (comprobado el 8/11/2026): **getourty.com**, **ourtyhealth.com**, **ourty.co**.
+- Recomendado: un **.com**, que es el que más confianza da y el más barato de renovar (~10–12 €/año). El .co es bastante más caro.
+- Evita las ofertas de "1 € el primer año" (.xyz, .site, .online): luego renuevan a 20–40 €.
+
+### 3.2 Comprarlo en Porkbun (recomendado: barato, en inglés sencillo y privacidad gratis)
+1. Entra en https://porkbun.com
+2. Escribe el nombre (por ejemplo `getourty`) en el buscador grande y pulsa la lupa.
+3. Busca la fila del **.com** y pulsa el carrito 🛒. Fíjate en el precio de **renovación** (renewal), no solo en el del primer año.
+4. Arriba a la derecha pulsa **Checkout**.
+5. Te pedirá **crear una cuenta**: email, contraseña y tus datos (nombre, dirección, teléfono). Es obligatorio por ley para registrar dominios, pero Porkbun los oculta gratis (**WHOIS Privacy**: déjalo activado).
+6. Duración: **1 año** basta. Puedes activar la **renovación automática (auto-renew)** para no perder el dominio nunca.
+7. Paga con tarjeta o PayPal. **Esto lo haces tú.**
+8. Recibirás un email de confirmación. ¡El dominio es tuyo!
+
+> Alternativa igual de buena: **Cloudflare Registrar** (https://dash.cloudflare.com), que vende al precio de coste, pero el panel es más técnico.
+
+### 3.3 Conectar el dominio a la web (te guío yo en directo)
+En Porkbun: **Account → Domain Management → tu dominio → DNS**. Hay que borrar los registros que trae por defecto y añadir estos:
+
+| Tipo | Host | Valor |
+|---|---|---|
+| A | (vacío) | 185.199.108.153 |
+| A | (vacío) | 185.199.109.153 |
+| A | (vacío) | 185.199.110.153 |
+| A | (vacío) | 185.199.111.153 |
+| CNAME | www | ourtyy.github.io |
+
+Después:
+1. Yo cambio la configuración de la web al dominio nuevo y la subo.
+2. Tú, en https://github.com/Ourtyy/Ourty/settings/pages, escribes el dominio en **Custom domain** y pulsas **Save**.
+3. Esperas entre 15 minutos y 24 horas a que se active, y marcas **Enforce HTTPS** (el candado 🔒).
 
 ## Paso 4 — Conectamos el sitio a internet (lo hacemos juntos)
 - Yo creo el repositorio y configuro GitHub Pages (hosting gratis).
