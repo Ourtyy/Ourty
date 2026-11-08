@@ -1,0 +1,19 @@
+{
+  "name": "Ourty",
+  "tagline": "Simple, science-backed ideas for a healthier everyday life",
+  "base_url": "https://ourtyy.github.io/ourty",
+  "language": "en",
+  "author": "The Ourty Editorial Team",
+  "contact_email": "hello@ourty.com",
+  "adsense_client": "",
+  "adsense_slot": "",
+  "custom_domain": "",
+  "categories": {
+    "nutrition": {"label": "Nutrition", "emoji": "🥗", "color": "#e9f5e1"},
+    "fitness":   {"label": "Fitness",   "emoji": "🏃", "color": "#e3eefb"},
+    "mind":      {"label": "Mind",      "emoji": "🧠", "color": "#f1e8fb"},
+    "sleep":     {"label": "Sleep",     "emoji": "🌙", "color": "#e6e9f7"},
+    "habits":    {"label": "Habits",    "emoji": "🌱", "color": "#fbf1df"},
+    "recipes":   {"label": "Recipes",   "emoji": "🍲", "color": "#fde8e1"}
+  }
+}

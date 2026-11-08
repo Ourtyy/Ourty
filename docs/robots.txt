@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ourtyy.github.io/ourty/sitemap.xml
