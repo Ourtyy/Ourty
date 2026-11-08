@@ -2,6 +2,7 @@
 """Find beautiful, free, commercially usable photos for an article.
 
   python3 find_image.py search "overnight oats bowl"  -> saves up to 8 small candidates in .image-candidates/
+  python3 find_image.py attach <N> <article-slug> "<alt text>"   -> sets candidate N as the article's main photo
   python3 find_image.py pick <N> <name>               -> downloads candidate N in high quality as
                                                          content/images/<name>.jpg and prints the front matter lines
 
@@ -148,8 +149,30 @@ def pick(n, name):
     print(f"![<alt text>](images/{name}.jpg) Photo: [{meta['creator']}]({meta['source_url']})")
 
 
+def attach(n, slug, alt):
+    """Pick candidate N and write it as the main photo of article <slug> (in content/drafts or content/posts)."""
+    import contextlib, io, re
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        pick(n, slug)
+    lines = [l for l in buf.getvalue().splitlines() if re.match(r"^image(_\w+)?: ", l)]
+    lines = [f"image_alt: {alt}" if l.startswith("image_alt:") else l for l in lines]
+    files = list((ROOT / "content").glob(f"*/{slug}.md")) + list((ROOT / "content").glob(f"*/*-{slug}.md"))
+    if not files:
+        sys.exit(f"No article found for {slug}")
+    f = files[0]
+    text = f.read_text(encoding="utf-8")
+    text = re.sub(r"^image(_\w+)?:.*\n", "", text, flags=re.M)
+    text = text.replace("\n---\n", "\n" + "\n".join(lines) + "\n---\n", 1)
+    f.write_text(text, encoding="utf-8")
+    print(f"Photo {n} attached to {f.relative_to(ROOT)}")
+
+
 if __name__ == "__main__":
     a = sys.argv[1:]
+    if len(a) == 4 and a[0] == "attach":
+        attach(a[1], a[2], a[3])
+        sys.exit()
     if len(a) == 2 and a[0] == "search":
         search(a[1])
     elif len(a) == 3 and a[0] == "pick":

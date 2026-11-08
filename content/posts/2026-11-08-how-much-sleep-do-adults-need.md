@@ -3,6 +3,12 @@ date: 2026-11-08
 title: How Much Sleep Do Adults Really Need?
 description: What the experts recommend, why it matters, and seven small habits that make a good night's sleep more likely.
 category: sleep
+image: https://images.unsplash.com/photo-1677161190157-9f4f3432c3b4?ixid=M3wxMTI3NDAwfDB8MXxzZWFyY2h8NXx8Y296eSUyMGJlZHJvb20lMjBtb3JuaW5nJTIwbGlnaHQlMjBiZWR8ZW58MXwwfHx8MTc5NDE0MTcxMHww&ixlib=rb-4.1.0&w=1600&q=80&fm=jpg&fit=crop
+image_alt: A cosy bed with an open book, a cup of tea and a candle
+image_credit: Galina Kondratenko
+image_source: https://unsplash.com/@paralisart?utm_source=ourty&utm_medium=referral
+image_license: Unsplash
+image_license_url: https://unsplash.com/?utm_source=ourty&utm_medium=referral
 ---
 Sleep is often the first thing we sacrifice when life gets busy. But it isn't a luxury — it's as important for your health as food and exercise. So how much do you actually need?
 

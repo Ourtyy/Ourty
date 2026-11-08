@@ -104,9 +104,9 @@ a:hover { text-decoration: underline; }
 .fine { font-size: 12px; }
 
 /* images */
-.card-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.lead-post .card-art { position: relative; }
-.lead-post .card-art img { position: absolute; inset: 0; }
+.card-art { position: relative; overflow: hidden; }
+.card-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
+.card:hover .card-art img { transform: scale(1.04); }
 .hero-img { margin: 28px 0 8px; }
 .hero-img img, .prose figure img { width: 100%; height: auto; border-radius: 16px; display: block; }
 .hero-img img { aspect-ratio: 16/9; object-fit: cover; }

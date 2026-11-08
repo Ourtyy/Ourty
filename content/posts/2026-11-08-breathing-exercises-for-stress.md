@@ -3,6 +3,12 @@ date: 2026-11-08
 title: A 5-Minute Breathing Exercise for Stressful Days
 description: A simple, free technique you can use anywhere to feel calmer — step by step.
 category: mind
+image: https://images.unsplash.com/photo-1461468611824-46457c0e11fd?ixid=M3wxMTI3NDAwfDB8MXxzZWFyY2h8MXx8d29tYW4lMjByZWxheGluZyUyMGRlZXAlMjBicmVhdGglMjBuYXR1cmV8ZW58MXwwfHx8MTc5NDE0MTcyMXww&ixlib=rb-4.1.0&w=1600&q=80&fm=jpg&fit=crop
+image_alt: A woman sitting calmly in the grass looking at the sea at sunset
+image_credit: Artem Kovalev
+image_source: https://unsplash.com/@artemkovalev?utm_source=ourty&utm_medium=referral
+image_license: Unsplash
+image_license_url: https://unsplash.com/?utm_source=ourty&utm_medium=referral
 ---
 When stress hits, your breathing often becomes fast and shallow without you noticing. The good news is that this works both ways: by slowing your breathing on purpose, you can help your body calm down.
 

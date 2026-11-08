@@ -3,6 +3,12 @@ date: 2026-11-08
 title: Easy Overnight Oats: A 5-Minute High-Fibre Breakfast
 description: A no-cook breakfast you prepare the night before — plus four flavour ideas and why fibre matters.
 category: recipes
+image: https://images.unsplash.com/photo-1619987396130-cda83fce794b?ixlib=rb-4.1.0&w=1600&q=80&fm=jpg&fit=crop
+image_alt: A glass jar of overnight oats surrounded by fresh raspberries, blackberries and blueberries
+image_credit: Abdallah
+image_source: https://unsplash.com/@i3bd13?utm_source=ourty&utm_medium=referral
+image_license: Unsplash
+image_license_url: https://unsplash.com/?utm_source=ourty&utm_medium=referral
 ---
 If mornings are rushed, overnight oats are a lifesaver. You mix everything in a jar before bed, and breakfast is ready when you wake up. No cooking, no washing up a pan, and it's packed with fibre.
 
@@ -31,6 +37,8 @@ Oats are a great source — and they contain a type of soluble fibre called beta
 4. Top with fruit and a little honey if you like.
 
 That's it! It keeps in the fridge for up to 2 days, so you can make a couple at once.
+
+![A jar of overnight oats topped with berries and chocolate](https://images.unsplash.com/photo-1605983662255-aa2a612b81a0?ixlib=rb-4.1.0&w=1600&q=80&fm=jpg&fit=crop) Photo by [Márton Szalai](https://unsplash.com/@izzombol?utm_source=ourty&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=ourty&utm_medium=referral)
 
 ## Four flavour ideas
 
