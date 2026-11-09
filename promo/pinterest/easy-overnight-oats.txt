@@ -1,0 +1,5 @@
+PIN IMAGE: content/pins/easy-overnight-oats.png
+TITLE: 5-Minute Overnight Oats: An Easy High-Fibre Breakfast
+DESCRIPTION: A no-cook breakfast you prepare the night before — plus four flavour ideas and why fibre matters.
+LINK: https://ourtyy.github.io/Ourty/posts/easy-overnight-oats/
+BOARD: Recipes

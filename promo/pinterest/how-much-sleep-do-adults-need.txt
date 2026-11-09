@@ -1,0 +1,5 @@
+PIN IMAGE: content/pins/how-much-sleep-do-adults-need.png
+TITLE: How Much Sleep Do You Really Need?
+DESCRIPTION: What the experts recommend, why it matters, and seven small habits that make a good night's sleep more likely.
+LINK: https://ourtyy.github.io/Ourty/posts/how-much-sleep-do-adults-need/
+BOARD: Sleep

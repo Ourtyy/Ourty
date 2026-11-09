@@ -7,7 +7,7 @@ The owner speaks Spanish: always reply in Spanish. Articles are written in Engli
 ## Workflow
 - New articles go to `content/drafts/<slug>.md`. The owner reviews every article before it goes live.
 - Preview: `python3 build.py preview` (output in `preview/`, served by the `ourty-site` launch config on port 8766).
-- Publish only when the owner says so: `python3 build.py publish <slug>`, then `git add -A && git commit -m "Publish <slug>" && git push`.
+- Publish only when the owner says so: `python3 build.py publish <slug>`, then `python3 make_promo.py` (renders the Pinterest pin and promo files), write the Substack teaser (see Promotion), `python3 build.py`, then `git add -A && git commit -m "Publish <slug>" && git push`.
 - Never put AdSense IDs or other config in unless the owner gives them.
 
 ## Article format
@@ -16,6 +16,8 @@ The owner speaks Spanish: always reply in Spanish. Articles are written in Engli
 title: Clear, specific title (55–65 chars ideal)
 description: One-sentence summary for Google (140–160 chars)
 category: nutrition | fitness | mind | sleep | habits | recipes
+pin_title: Short, catchy Pinterest title (max ~60 chars, no colon-heavy SEO style)
+pin_description: 1–2 inviting sentences for Pinterest with natural keywords
 ---
 Intro paragraph (hook, no heading)...
 
@@ -40,3 +42,8 @@ Intro paragraph (hook, no heading)...
 - Main photo: `python3 find_image.py attach <N> <article-slug> "<alt text describing the photo>"`.
 - Extra photos inside the body (recipes: after the ingredients/method and near the variations): `python3 find_image.py pick <N> <name>` prints a ready `![alt](url) Photo by …` line — paste it on its own line between paragraphs, replacing `<alt text>`. Run a new search before each pick if you need a different subject.
 - Keep the credit line exactly as printed (Unsplash requires crediting the photographer).
+
+## Promotion (Pinterest + Substack)
+- `python3 make_promo.py` creates for each published article: `content/pins/<slug>.png` (1000x1500 pin, also served at /pins/ and in feed.xml), `promo/pinterest/<slug>.txt` (title, description, link, board) and a stub `promo/substack/<slug>.md`.
+- Substack teaser: replace the stub with TITLE / SUBTITLE / LINK / IMAGE lines and a 150–250 word teaser in English: a hook, why it matters, 3 bullet tips, a line on what the full article adds, a bold link "👉 Read the full … on Ourty", and the italic one-line "general information, not medical advice" footer. Never paste the full article (duplicate content hurts Google ranking of the site).
+- Never post to Substack or Pinterest without the owner's explicit OK for that specific post.

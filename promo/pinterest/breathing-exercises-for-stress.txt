@@ -1,0 +1,5 @@
+PIN IMAGE: content/pins/breathing-exercises-for-stress.png
+TITLE: A 5-Minute Breathing Exercise for Stressful Days
+DESCRIPTION: A simple, free technique you can use anywhere to feel calmer — step by step.
+LINK: https://ourtyy.github.io/Ourty/posts/breathing-exercises-for-stress/
+BOARD: Mind

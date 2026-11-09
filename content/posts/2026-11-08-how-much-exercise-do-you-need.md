@@ -9,6 +9,7 @@ image_credit: Andrew Tanglao
 image_source: https://unsplash.com/@andrewtanglao?utm_source=ourty&utm_medium=referral
 image_license: Unsplash
 image_license_url: https://unsplash.com/?utm_source=ourty&utm_medium=referral
+pin_title: How Much Exercise Do You Really Need?
 ---
 If you've ever wondered whether your daily walk "counts", you're not alone. The good news: the official recommendation is more achievable than most people think, and you don't need a gym membership to meet it.
 

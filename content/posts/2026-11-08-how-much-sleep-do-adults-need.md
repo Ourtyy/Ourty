@@ -9,6 +9,7 @@ image_credit: Galina Kondratenko
 image_source: https://unsplash.com/@paralisart?utm_source=ourty&utm_medium=referral
 image_license: Unsplash
 image_license_url: https://unsplash.com/?utm_source=ourty&utm_medium=referral
+pin_title: How Much Sleep Do You Really Need?
 ---
 Sleep is often the first thing we sacrifice when life gets busy. But it isn't a luxury — it's as important for your health as food and exercise. So how much do you actually need?
 

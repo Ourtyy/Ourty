@@ -9,6 +9,7 @@ image_credit: Abdallah
 image_source: https://unsplash.com/@i3bd13?utm_source=ourty&utm_medium=referral
 image_license: Unsplash
 image_license_url: https://unsplash.com/?utm_source=ourty&utm_medium=referral
+pin_title: 5-Minute Overnight Oats: An Easy High-Fibre Breakfast
 ---
 If mornings are rushed, overnight oats are a lifesaver. You mix everything in a jar before bed, and breakfast is ready when you wake up. No cooking, no washing up a pan, and it's packed with fibre.
 

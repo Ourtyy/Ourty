@@ -9,6 +9,7 @@ image_credit: Artem Kovalev
 image_source: https://unsplash.com/@artemkovalev?utm_source=ourty&utm_medium=referral
 image_license: Unsplash
 image_license_url: https://unsplash.com/?utm_source=ourty&utm_medium=referral
+pin_title: A 5-Minute Breathing Exercise for Stressful Days
 ---
 When stress hits, your breathing often becomes fast and shallow without you noticing. The good news is that this works both ways: by slowing your breathing on purpose, you can help your body calm down.
 

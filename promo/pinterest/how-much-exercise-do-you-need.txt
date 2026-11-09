@@ -1,0 +1,5 @@
+PIN IMAGE: content/pins/how-much-exercise-do-you-need.png
+TITLE: How Much Exercise Do You Really Need?
+DESCRIPTION: The World Health Organization's activity guidelines in plain English — and simple ways to hit them without a gym.
+LINK: https://ourtyy.github.io/Ourty/posts/how-much-exercise-do-you-need/
+BOARD: Fitness

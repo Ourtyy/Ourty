@@ -253,8 +253,9 @@ def build(mode="public"):
     out.mkdir()
     for f in STATIC.iterdir():
         shutil.copy(f, out / f.name)
-    if (CONTENT / "images").exists():
-        shutil.copytree(CONTENT / "images", out / "images")
+    for extra in ("images", "pins"):
+        if (CONTENT / extra).exists():
+            shutil.copytree(CONTENT / extra, out / extra)
 
     base = SITE["base_url"].rstrip("/")
     posts = load_posts(include_drafts=(mode == "preview"))
@@ -347,7 +348,10 @@ def build(mode="public"):
         write(out, "robots.txt", f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n")
         items = "".join(
             f"<item><title>{html.escape(p['title'])}</title><link>{base}/posts/{p['slug']}/</link>"
-            f"<guid>{base}/posts/{p['slug']}/</guid><description>{html.escape(p.get('description', ''))}</description></item>"
+            f"<guid>{base}/posts/{p['slug']}/</guid><description>{html.escape(p.get('description', ''))}</description>"
+            + (f'<enclosure url="{base}/pins/{p["slug"]}.png" type="image/png" length="0"/>' if (CONTENT / "pins" / f"{p['slug']}.png").exists()
+               else (f'<enclosure url="{html.escape(img_url(p["image"], base + "/"))}" type="image/jpeg" length="0"/>' if p.get("image") else ""))
+            + "</item>"
             for p in posts[:20])
         write(out, "feed.xml", f'<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>{SITE["name"]}</title>'
               f'<link>{base}/</link><description>{html.escape(SITE["tagline"])}</description>{items}</channel></rss>')
