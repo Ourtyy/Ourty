@@ -1,0 +1,5 @@
+PIN IMAGE: content/pins/roasted-cabbage-wedges.png
+TITLE: Crispy Roasted Cabbage Wedges You'll Actually Crave
+DESCRIPTION: Golden, caramelised cabbage wedges with a zesty lemon-garlic yogurt sauce. A cheap, cosy, high-fibre side dish that's ready in about 35 minutes.
+LINK: https://ourtyy.github.io/Ourty/posts/roasted-cabbage-wedges/
+BOARD: Recipes

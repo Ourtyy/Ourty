@@ -1,0 +1,5 @@
+PIN IMAGE: content/pins/winter-blues-or-sad.png
+TITLE: Winter Blues or SAD? Simple Ways to Feel Brighter
+DESCRIPTION: Shorter days getting you down? Learn how to tell the winter blues from seasonal depression, and try these gentle, science-backed habits to lift your mood.
+LINK: https://ourtyy.github.io/Ourty/posts/winter-blues-or-sad/
+BOARD: Mind

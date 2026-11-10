@@ -1,4 +1,5 @@
 ---
+date: 2026-11-10
 title: Winter Blues or SAD? How to Tell the Difference and Feel Better
 description: Darker days can drag your mood down. Learn the difference between the winter blues and seasonal affective disorder, plus evidence-based ways to feel better.
 category: mind

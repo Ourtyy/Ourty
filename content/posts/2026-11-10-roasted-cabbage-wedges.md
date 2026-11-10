@@ -1,4 +1,5 @@
 ---
+date: 2026-11-10
 title: Crispy Roasted Cabbage Wedges: 2026's Most Surprising Food Trend
 description: Cabbage is having a moment. Here's an easy recipe for crispy roasted cabbage wedges with lemon-garlic yogurt, plus what the nutrition evidence says.
 category: recipes
