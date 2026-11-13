@@ -1,5 +1,5 @@
 PIN IMAGE: content/pins/savory-oatmeal-bowl.png
-TITLE: Savory Oatmeal Bowl with a Jammy Egg
+TITLE: Savory Oats: Your New Cosy Breakfast
 DESCRIPTION: Swap sweet porridge for a cosy savory oat bowl with garlicky greens, a jammy egg and olive oil. Ready in 10 minutes, high in fibre, and seriously satisfying.
 LINK: https://ourtyy.github.io/Ourty/posts/savory-oatmeal-bowl/
 BOARD: Recipes
