@@ -1,0 +1,5 @@
+PIN IMAGE: content/pins/coffee-and-dementia.png
+TITLE: Is Your Morning Coffee Good for Your Brain?
+DESCRIPTION: A 43-year study linked 2–3 cups of coffee a day to a lower risk of dementia. Here's what the research really says, plus simple brain-friendly coffee habits.
+LINK: https://ourtyy.github.io/Ourty/posts/coffee-and-dementia/
+BOARD: Mind

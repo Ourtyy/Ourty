@@ -1,4 +1,5 @@
 ---
+date: 2026-11-13
 title: Coffee and Dementia: What the Big 43-Year Study Really Found
 description: A huge Harvard study linked 2–3 cups of coffee a day to lower dementia risk. Here's what it found, what it can't prove, and how to drink coffee wisely.
 category: mind

@@ -1,8 +1,9 @@
 ---
+date: 2026-11-13
 title: Savory Oatmeal Bowl: The Cosy High-Fibre Breakfast Trend to Try
 description: Savory oats swap sugar for eggs, greens and a drizzle of olive oil. Here's an easy 10-minute recipe, why it keeps you full, and tasty ways to vary it.
 category: recipes
-pin_title: Savory Oatmeal Bowl with a Jammy Egg
+pin_title: Savory Oats: Your New Cosy Breakfast
 pin_description: Swap sweet porridge for a cosy savory oat bowl with garlicky greens, a jammy egg and olive oil. Ready in 10 minutes, high in fibre, and seriously satisfying.
 image: https://images.unsplash.com/photo-1600688654899-379ec76aca42?ixid=M3wxMTI3NDAwfDB8MXxzZWFyY2h8OHx8c2F2b3J5JTIwb2F0bWVhbCUyMGVnZyUyMGJvd2x8ZW58MXwwfHx8MTc5NDU1NzQyNXww&ixlib=rb-4.1.0&w=1600&q=80&fm=jpg&fit=crop
 image_alt: A white bowl of savory grains topped with a sunny-side-up egg, chilli and fresh herbs on a warm wooden table
