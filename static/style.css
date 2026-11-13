@@ -89,6 +89,9 @@ a:hover { text-decoration: underline; }
 .prose blockquote p { margin: 0; }
 .prose code { background: var(--line); padding: 1px 5px; border-radius: 4px; font-size: .9em; }
 .disclaimer { margin: 40px 0 0; padding: 16px 20px; border: 1px solid var(--line); border-radius: 14px; font-size: 14px; color: var(--muted); background: var(--surface); }
+.pin-save { margin: 32px auto 0; max-width: 320px; text-align: center; }
+.pin-save-label { font-size: 14px; color: var(--muted); margin: 0 0 10px; }
+.pin-save img { width: 100%; height: auto; border-radius: 14px; box-shadow: 0 6px 20px rgba(0,0,0,.08); }
 .draft-note { background: #fff1e6; color: #9a3412; padding: 10px 14px; border-radius: 10px; font-size: 14px; font-weight: 600; }
 .related { border-top: 1px solid var(--line); margin-top: 40px; padding-top: 12px; }
 .related h2 { font: 600 26px var(--serif); }

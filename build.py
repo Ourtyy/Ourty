@@ -300,6 +300,14 @@ def build(mode="public"):
         if len(related) < 3:
             related += [q for q in posts if q not in related and q["slug"] != p["slug"]][: 3 - len(related)]
         draft_note = '<p class="draft-note">This is a draft — not visible on the public site.</p>' if p.get("draft") else ""
+        pin_block = ""
+        if (CONTENT / "pins" / f"{p['slug']}.png").exists():
+            pin_title = html.escape(p.get("pin_title") or p["title"])
+            pin_desc = html.escape(p.get("pin_description") or p.get("description", ""))
+            pin_block = (f'<aside class="pin-save"><p class="pin-save-label">📌 Save it for later on Pinterest</p>'
+                         f'<img src="{r}pins/{p["slug"]}.png" alt="{pin_title}" title="{pin_title}" '
+                         f'data-pin-description="{pin_desc}" data-pin-url="{base}/posts/{p["slug"]}/" '
+                         f'width="1000" height="1500" loading="lazy"></aside>')
         schema = json.dumps({
             "@context": "https://schema.org", "@type": "Article", "headline": p["title"],
             "description": p.get("description", ""), "datePublished": p.get("date", ""),
@@ -317,6 +325,7 @@ def build(mode="public"):
   {hero_img}
   <div class="prose">{body_html}</div>
   <aside class="disclaimer"><strong>Health note:</strong> this article is general information, not medical advice. Talk to a doctor or qualified professional before making changes to your diet, exercise or medication — especially if you are pregnant or have a health condition.</aside>
+  {pin_block}
   {ad('after-article', mode)}
 </article>
 <section class="related"><h2>Keep reading</h2><div class="grid">{''.join(card(q, r) for q in related)}</div></section>"""
