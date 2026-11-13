@@ -1,0 +1,5 @@
+PIN IMAGE: content/pins/japanese-walking.png
+TITLE: Japanese Walking: The 30-Minute Walk That Works Harder
+DESCRIPTION: Fast for 3 minutes, slow for 3, repeat. Learn how the viral Japanese walking method works, what the science says, and how to try it on your next walk.
+LINK: https://ourtyy.github.io/Ourty/posts/japanese-walking/
+BOARD: Fitness

@@ -1,4 +1,5 @@
 ---
+date: 2026-11-13
 title: Japanese Walking: Does the 3-Minute Interval Trend Really Work?
 description: Japanese walking alternates 3 minutes fast and 3 minutes slow. Here's what the research behind the viral trend shows, its limits, and how to start.
 category: fitness

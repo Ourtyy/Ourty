@@ -1,4 +1,5 @@
 ---
+date: 2026-11-13
 title: Fibermaxxing, Done Right: A Cosy High-Fibre Lentil and Bean Soup
 description: Fibermaxxing is all over TikTok. Here's what the fibre trend gets right, where it goes too far, and a hearty lentil and bean soup to try this week.
 category: recipes

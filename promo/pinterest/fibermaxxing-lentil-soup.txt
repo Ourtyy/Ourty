@@ -1,0 +1,5 @@
+PIN IMAGE: content/pins/fibermaxxing-lentil-soup.png
+TITLE: Cosy High-Fibre Lentil & Bean Soup
+DESCRIPTION: A hearty one-pot lentil, white bean and veggie soup with about 12 g of fibre per bowl. Cheap, freezer-friendly and perfect for chilly evenings.
+LINK: https://ourtyy.github.io/Ourty/posts/fibermaxxing-lentil-soup/
+BOARD: Recipes
