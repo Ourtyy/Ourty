@@ -8,6 +8,7 @@
   "adsense_client": "",
   "adsense_slot": "",
   "custom_domain": "",
+  "goatcounter": "ourty",
   "categories": {
     "nutrition": {"label": "Nutrition", "emoji": "🥗", "color": "#e9f5e1"},
     "fitness":   {"label": "Fitness",   "emoji": "🏃", "color": "#e3eefb"},
