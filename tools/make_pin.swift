@@ -11,10 +11,10 @@ let (photoArg, category, title, outPath) = (args[1], args[2].uppercased(), args[
 
 let W: CGFloat = 1000, H: CGFloat = 1500
 let photoH: CGFloat = 900
-let cream = NSColor(calibratedRed: 0.984, green: 0.980, blue: 0.969, alpha: 1)
-let green = NSColor(calibratedRed: 0.184, green: 0.478, blue: 0.341, alpha: 1)
-let ink = NSColor(calibratedRed: 0.122, green: 0.165, blue: 0.141, alpha: 1)
-let muted = NSColor(calibratedRed: 0.373, green: 0.420, blue: 0.392, alpha: 1)
+let cream = NSColor(srgbRed: 0.980, green: 0.980, blue: 0.980, alpha: 1)
+let green = NSColor(srgbRed: 0.169, green: 0.294, blue: 1.000, alpha: 1)
+let ink = NSColor(srgbRed: 0.067, green: 0.067, blue: 0.067, alpha: 1)
+let muted = NSColor(srgbRed: 0.365, green: 0.376, blue: 0.439, alpha: 1)
 
 func loadImage(_ s: String) -> NSImage? {
     if s.hasPrefix("http"), let url = URL(string: s), let data = try? Data(contentsOf: url) { return NSImage(data: data) }
@@ -88,7 +88,7 @@ let ty = titleBox.minY + (titleBox.height - tRect.height) / 2
 
 // brand footer
 let line = NSRect(x: W / 2 - 40, y: 150, width: 80, height: 3)
-NSColor(calibratedRed: 0.949, green: 0.722, blue: 0.294, alpha: 1).setFill()
+NSColor(srgbRed: 1.000, green: 0.878, blue: 0.239, alpha: 1).setFill()
 line.fill()
 let brand: [NSAttributedString.Key: Any] = [.font: font(["NewYork-Bold", "Georgia-Bold"], 44, bold: true),
                                             .foregroundColor: green, .paragraphStyle: center]
