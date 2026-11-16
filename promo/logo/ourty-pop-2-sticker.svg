@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+<rect width="1000" height="1000" fill="#2B4BFF"/>
+<g transform="translate(5 0)">
+<g transform="translate(12 12)" fill="#111111">
+<circle cx="255" cy="505" r="62" fill="none" stroke="#111111" stroke-width="40"/>
+<text x="335" y="565" font-family="Avenir Next" font-weight="900" font-size="230" letter-spacing="-8">urty</text>
+</g>
+<circle cx="255" cy="505" r="62" fill="none" stroke="#FFE03D" stroke-width="40"/>
+<path d="M298 440 C 298 398 325 368 372 360 C 374 405 345 436 298 440 Z" fill="#FFE03D"/>
+<text x="335" y="565" font-family="Avenir Next" font-weight="900" font-size="230" fill="#FFFFFF" letter-spacing="-8">urty</text>
+</g>
+</svg>

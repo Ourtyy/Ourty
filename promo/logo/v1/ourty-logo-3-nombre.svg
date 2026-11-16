@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+<rect width="1000" height="1000" fill="#2f7a57"/>
+<g transform="translate(30 0)">
+<circle cx="262" cy="500" r="60" fill="none" stroke="#f2b84b" stroke-width="27"/>
+<path d="M300 440 C 300 400 325 370 370 362 C 372 405 345 435 300 440 Z" fill="#f2b84b"/>
+<text x="338" y="560" font-family="Georgia" font-weight="bold" font-size="235" fill="#fbf6ec" letter-spacing="-4">urty</text>
+</g>
+</svg>
