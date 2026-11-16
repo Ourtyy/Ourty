@@ -1,19 +1,19 @@
 :root {
-  --bg: #fbfaf7;
+  --bg: #fafafa;
   --surface: #ffffff;
-  --ink: #1f2a24;
-  --muted: #5f6b64;
-  --line: #e6e2d9;
-  --brand: #2f7a57;
+  --ink: #111111;
+  --muted: #5d6070;
+  --line: #e6e6ec;
+  --brand: #2B4BFF;
   --brand-ink: #ffffff;
-  --accent: #f2b84b;
+  --accent: #FFE03D;
   --serif: "Fraunces", Georgia, serif;
   --sans: "Inter", system-ui, -apple-system, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #141917; --surface: #1b211e; --ink: #e9eee9; --muted: #a2ada6;
-    --line: #2c3430; --brand: #5cc08f; --brand-ink: #0f1a14;
+    --bg: #0e0e11; --surface: #18181d; --ink: #f2f2f5; --muted: #a5a7b3;
+    --line: #2a2a32; --brand: #7B8FFF; --brand-ink: #0e0e11;
   }
   .card-art, .cat-head { filter: brightness(.82) saturate(.9); }
 }
@@ -72,7 +72,7 @@ a:hover { text-decoration: underline; }
 }
 
 /* category */
-.cat-head { margin: 32px 0 0; border-radius: 22px; padding: 36px; display: flex; align-items: center; gap: 18px; color: #1f2a24; }
+.cat-head { margin: 32px 0 0; border-radius: 22px; padding: 36px; display: flex; align-items: center; gap: 18px; color: #111111; }
 .cat-head span { font-size: 54px; }
 .cat-head h1 { font: 700 40px var(--serif); margin: 0; }
 .empty { color: var(--muted); }
