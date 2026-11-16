@@ -1,0 +1,5 @@
+PIN IMAGE: content/pins/winter-citrus-salad.png
+TITLE: Bright Winter Citrus Salad
+DESCRIPTION: Juicy oranges, pomegranate, kale and crispy chickpeas in one sunny 15-minute bowl. A fresh, vitamin C-rich salad to brighten grey winter days.
+LINK: https://ourtyy.github.io/Ourty/posts/winter-citrus-salad/
+BOARD: Recipes

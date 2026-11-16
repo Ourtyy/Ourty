@@ -1,4 +1,5 @@
 ---
+date: 2026-11-16
 title: Does Forcing a Smile Make You Happier? What a New Study Found
 description: A new study of 1,200 people finds one smile can lift your mood, but repeated, pressured smiling can leave you less happy and more irritated.
 category: mind

@@ -1,4 +1,5 @@
 ---
+date: 2026-11-16
 title: Winter Citrus Salad with Kale and Chickpeas: A Bright Vitamin C Bowl
 description: A colourful winter citrus salad with oranges, pomegranate, kale and chickpeas. Easy 15-minute recipe, plus what vitamin C really does (and doesn't) do.
 category: recipes
