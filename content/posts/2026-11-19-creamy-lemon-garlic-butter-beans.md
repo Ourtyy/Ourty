@@ -1,13 +1,14 @@
 ---
+date: 2026-11-19
 title: Creamy Lemon Garlic Butter Beans: The 20-Minute BeanTok Dinner
 description: Beans are all over TikTok. This creamy, cream-free butter bean skillet with spinach, garlic and lemon is a cheap, high-fibre dinner ready in 20 minutes.
 category: recipes
 pin_title: Creamy Lemon Garlic Butter Beans (No Cream!)
 pin_description: A cosy one-pan dinner of creamy butter beans, garlic, spinach and lemon, ready in 20 minutes. High in fibre, budget-friendly and perfect with crusty bread.
-image: https://images.unsplash.com/photo-1715216553304-4960f95dfff2?ixid=M3wxMTI3NDAwfDB8MXxzZWFyY2h8NXx8Y3JlYW15JTIwYnV0dGVyJTIwYmVhbnMlMjBza2lsbGV0JTIwc3BpbmFjaHxlbnwxfDB8fHwxNzk1MDc1NjUyfDA&ixlib=rb-4.1.0&w=1600&q=80&fm=jpg&fit=crop
-image_alt: A pot of butter beans in a rich tomato sauce with fresh parsley and toasted flatbread on a light table
-image_credit: Kerri Leung
-image_source: https://unsplash.com/@kerrileung1?utm_source=ourty&utm_medium=referral
+image: https://images.unsplash.com/photo-1605712775989-26693f8f28f5?ixid=M3wxMTI3NDAwfDB8MXxzZWFyY2h8MXx8d2hpdGUlMjBiZWFucyUyMGJvd2wlMjBsZW1vbiUyMGhlcmJzfGVufDF8MHx8fDE3OTUwNzU2Njh8MA&ixlib=rb-4.1.0&w=1600&q=80&fm=jpg&fit=crop
+image_alt: A bowl of pale butter beans on a bright yellow plate beside fresh green leaves
+image_credit: Nguyen Dang Hoang Nhu
+image_source: https://unsplash.com/@nguyendhn?utm_source=ourty&utm_medium=referral
 image_license: Unsplash
 image_license_url: https://unsplash.com/?utm_source=ourty&utm_medium=referral
 ---
@@ -66,7 +67,7 @@ Some BeanTok creators promote a strict "bean protocol" of two cups daily. That's
 6. **Finish bright.** Take the pan off the heat and stir in the lemon zest, most of the lemon juice and the Parmesan, if using. Taste and adjust with salt, pepper and more lemon.
 7. **Serve.** Scatter with fresh herbs and a drizzle of olive oil. Serve with crusty wholegrain bread, over rice or quinoa, or topped with a fried egg.
 
-![A bowl of pale butter beans soaking in water, set on a bright yellow plate beside fresh green leaves](https://images.unsplash.com/photo-1605712775989-26693f8f28f5?ixid=M3wxMTI3NDAwfDB8MXxzZWFyY2h8MXx8d2hpdGUlMjBiZWFucyUyMGJvd2wlMjBsZW1vbiUyMGhlcmJzfGVufDF8MHx8fDE3OTUwNzU2Njh8MA&ixlib=rb-4.1.0&w=1600&q=80&fm=jpg&fit=crop) Photo by [Nguyen Dang Hoang Nhu](https://unsplash.com/@nguyendhn?utm_source=ourty&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=ourty&utm_medium=referral)
+![A small cast-iron pot of golden legumes with sliced garlic, onion and fresh green herbs](https://images.unsplash.com/photo-1654199903998-e49181b41a95?ixid=M3wxMTI3NDAwfDB8MXxzZWFyY2h8Nnx8d2hpdGUlMjBiZWFuJTIwc3RldyUyMGdyZWVucyUyMHNraWxsZXR8ZW58MXwwfHx8MTc5NTA3NTgwNHww&ixlib=rb-4.1.0&w=1600&q=80&fm=jpg&fit=crop) Photo by [martin becker](https://unsplash.com/@martinb26?utm_source=ourty&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=ourty&utm_medium=referral)
 
 > **Tip:** Rinsing canned beans in a sieve under cold water removes the starchy liquid and some of the salt. Choose cans labelled "no added salt" when you can, and season to taste at the end.
 

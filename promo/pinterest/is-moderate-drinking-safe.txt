@@ -1,0 +1,5 @@
+PIN IMAGE: content/pins/is-moderate-drinking-safe.png
+TITLE: Is a Glass of Wine a Day Really Healthy?
+DESCRIPTION: A big new study looked at more than 7,000 papers on alcohol and health. Here's what it found about "moderate" drinking, plus easy ways to drink a little less this season.
+LINK: https://ourtyy.github.io/Ourty/posts/is-moderate-drinking-safe/
+BOARD: Habits

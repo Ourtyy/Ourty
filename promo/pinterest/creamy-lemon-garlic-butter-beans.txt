@@ -1,0 +1,5 @@
+PIN IMAGE: content/pins/creamy-lemon-garlic-butter-beans.png
+TITLE: Creamy Lemon Garlic Butter Beans (No Cream!)
+DESCRIPTION: A cosy one-pan dinner of creamy butter beans, garlic, spinach and lemon, ready in 20 minutes. High in fibre, budget-friendly and perfect with crusty bread.
+LINK: https://ourtyy.github.io/Ourty/posts/creamy-lemon-garlic-butter-beans/
+BOARD: Recipes

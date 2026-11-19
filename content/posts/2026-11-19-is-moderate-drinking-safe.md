@@ -1,4 +1,5 @@
 ---
+date: 2026-11-19
 title: Is Moderate Drinking Safe? What a Big New Alcohol Study Found
 description: A major 2026 study found no level of drinking that's good for your overall health. Here's what it means for your holiday glass of wine.
 category: habits
