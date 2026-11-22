@@ -1,4 +1,5 @@
 ---
+date: 2026-11-22
 title: Mouth Taping for Sleep: What the Science Says Before You Try It
 description: Mouth taping is all over TikTok, promising better sleep and less snoring. Here's what the research really shows, the risks, and safer things to try.
 category: sleep

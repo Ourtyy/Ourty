@@ -1,0 +1,5 @@
+PIN IMAGE: content/pins/mouth-taping-sleep.png
+TITLE: Mouth Taping for Sleep: Hype or Help?
+DESCRIPTION: Thinking of taping your mouth shut at night? See what the research really says about snoring and sleep, who should never try it, and gentler ways to breathe easier.
+LINK: https://ourtyy.github.io/Ourty/posts/mouth-taping-sleep/
+BOARD: Sleep

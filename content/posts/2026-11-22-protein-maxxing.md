@@ -1,4 +1,5 @@
 ---
+date: 2026-11-22
 title: Protein-Maxxing: Do You Really Need All That Extra Protein?
 description: Protein is in everything from chips to water. Here's how much you actually need, who benefits from more, and the best foods to get it from.
 category: nutrition
