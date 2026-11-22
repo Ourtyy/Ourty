@@ -1,4 +1,5 @@
 ---
+date: 2026-11-22
 title: Is Full-Fat Dairy Bad for You? What a New 12-Week Study Found
 description: A new trial found three daily servings of full-fat dairy didn't hurt weight or cholesterol. Here's what it means, its limits, and how to choose dairy wisely.
 category: nutrition

@@ -1,4 +1,5 @@
 ---
+date: 2026-11-22
 title: The Best Exercise for Better Sleep? What New Research Says
 description: A new review of 30 trials ranked yoga as the top exercise for poor sleep. Here's what the research found, its limits, and how to time workouts for rest.
 category: fitness

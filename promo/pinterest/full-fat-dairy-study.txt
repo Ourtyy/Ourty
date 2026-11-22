@@ -1,0 +1,5 @@
+PIN IMAGE: content/pins/full-fat-dairy-study.png
+TITLE: Is Full-Fat Dairy Actually Bad for You?
+DESCRIPTION: Whole milk, real cheese, creamy yogurt... A new study challenges decades of low-fat advice. Here's what it really found and how to enjoy dairy the smart way.
+LINK: https://ourtyy.github.io/Ourty/posts/full-fat-dairy-study/
+BOARD: Nutrition

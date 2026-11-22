@@ -1,0 +1,5 @@
+PIN IMAGE: content/pins/best-exercise-for-sleep.png
+TITLE: The Best Exercise for Better Sleep
+DESCRIPTION: Tossing and turning? A new review of 30 studies found one type of exercise helped sleep the most. Here's what to try, how often, and when to work out.
+LINK: https://ourtyy.github.io/Ourty/posts/best-exercise-for-sleep/
+BOARD: Fitness
