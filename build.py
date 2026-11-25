@@ -141,6 +141,9 @@ def page(title, body, root, mode, description="", canonical="", extra_head="", i
     if gc and mode != "preview":
         ads_head += (f'<script data-goatcounter="https://{gc}.goatcounter.com/count" '
                      'async src="//gc.zgo.at/count.js"></script>')
+    pv = SITE.get("pinterest_verify")
+    if pv and mode != "preview":
+        ads_head += f'<meta name="p:domain_verify" content="{html.escape(pv)}"/>'
     full_title = f"{title} · {SITE['name']}" if title != SITE["name"] else f"{SITE['name']} · {SITE['tagline']}"
     langs = "".join(f'<option value="{c}">{n}</option>' for c, n in LANGS)
     draft_bar = '<div class="draft-bar">PREVIEW — includes unpublished drafts</div>' if mode == "preview" else ""
