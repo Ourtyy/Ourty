@@ -1,4 +1,5 @@
 ---
+date: 2026-11-25
 title: Holiday Eating Without Guilt: 7 Simple Habits That Really Work
 description: Holiday weight gain is smaller than you think, but it tends to stick. Seven science-backed habits to enjoy festive meals without the food coma.
 category: habits

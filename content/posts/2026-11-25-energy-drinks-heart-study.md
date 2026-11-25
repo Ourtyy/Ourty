@@ -1,4 +1,5 @@
 ---
+date: 2026-11-25
 title: Are Energy Drinks Bad for Your Heart? What a New Study Found
 description: A new American Heart Association study links energy drinks and stimulant supplements to heart scares in young adults. Here's what it means for you.
 category: nutrition

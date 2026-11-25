@@ -1,0 +1,5 @@
+PIN IMAGE: content/pins/energy-drinks-heart-study.png
+TITLE: Are Energy Drinks Bad for Your Heart?
+DESCRIPTION: A new heart study put energy drinks and pre-workout powders in the spotlight. Here's what it really found, how much caffeine is too much, and easy swaps for a natural energy boost.
+LINK: https://ourtyy.github.io/Ourty/posts/energy-drinks-heart-study/
+BOARD: Nutrition

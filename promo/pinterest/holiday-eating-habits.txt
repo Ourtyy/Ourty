@@ -1,0 +1,5 @@
+PIN IMAGE: content/pins/holiday-eating-habits.png
+TITLE: Enjoy Holiday Meals Without the Food Coma
+DESCRIPTION: You don't need to skip the pie. These 7 gentle, science-backed habits help you enjoy festive meals, feel good afterwards and start January without regrets.
+LINK: https://ourtyy.github.io/Ourty/posts/holiday-eating-habits/
+BOARD: Habits
